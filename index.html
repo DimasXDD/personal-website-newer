@@ -4,23 +4,103 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="css/styles.css" rel="stylesheet">
+
+    <link href="css/better.css" rel="stylesheet">
+
+    <link href="src/icon.jpg" rel="icon">
+
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Comfortaa&display=swap" rel="stylesheet">
-    <title>Дима Сиднев</title>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Caveat&display=swap" rel="stylesheet">
+
+    <title id="website-name">Дима Сиднев</title>
 </head>
 <body>
-    <div class="container">
-        <div class="left">
-            <img src="" alt="">
-        </div>
-        <div class="right">
-            <div class="arrows" id="arrowUp">↑</div>
-            <h2 class="carousel" id="text">Текст</h2>
-            <div class="arrows" id="arrowDwn">↓</div>
-        </div>
+    <div class="background">
+        <section id="navbar">
+            <div class="nav-container">
+                <button class="nav-h6" id="DimaSidnev" value="PLAY">Дима Сиднев</button>
+                <h6 class="nav-h6">IT энтузиаст</h6>
+            </div>
+            <audio src="src/dw-arrived.mpeg" id="mireska-has-arrived"></audio>
+        </section>
+        <section id="home">
+            <div class="home-container">
+                <h2 class="home-h2"> <span>Я</span><br> Юрист <span>&</span><br> Программист</h2>
+                <div class="home-right-part">
+                    <div class="home-clock">
+                        <h3 onclick="time()" id="clock" class="home-clock-h3">Sample text</h3>
+                        <h6 class="home-clock-h6">А я всё ещё учусь</h6>
+                    </div>
+                    <h4 class="home-h4">Программирование это хобби для меня.<br> Так-то я оканчиваю юридический техникум.<br> И живу в Воронеже.</h4>
+                </div>
+            </div>
+        </section>
     </div>
+    <section id="about">
+        <div class="about-container">
+            <div class="about-left-part">
+                <div class="about-greeting-texts">
+                    <h3 class="about-greeting-h3">Привет, я Дима!</h3>
+                    <h6 class="about-greeting-h6">Дима Сиднев</h6>
+                </div>
+                <h4 class="about-left-h4">Я занимаюсь веб-разработкой и параллельно иду на красный диплом, жаль только не программиста. Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум Лорем ипсум</h4>
+            </div>
+            <div class="about-right-part">
+                <img class="about-right-img">
+                <h4 class="about-right-h4">Эй, это я! <span class="about-arrow">⤴</span></h4>
+            </div>
+        </div>
+    </section>
+    <section id="work-showcase">
+        <h3 class="work-title-h3">Мои работы<span class="work-showcase-star">✦</span></h3>
+        <div class="work-showcase-container">
+            <div class="work-showcase-1">
+                <img src="src/empty-300x-500.jpg" class="work-showcase-img">
+                <div class="work-showcase-texts">
+                    <h3 class="work-showcase-h3">Первое портфолио</h3>
+                    <h6 class="work-showcase-h6">Здесь я начал...</h6>
+                </div>
+            </div>
+            <div class="work-showcase-2">
+                <img src="src/empty-300x-500.jpg" class="work-showcase-img">
+                <div class="work-showcase-texts">
+                    <h3 class="work-showcase-h3">Второе портфолио</h3>
+                    <h6 class="work-showcase-h6">А чё нет?</h6>
+                </div>
+            </div>
+            <div class="work-showcase-3">
+                <img src="src/empty-300x-500.jpg" class="work-showcase-img">
+                <div class="work-showcase-texts">
+                    <h3 class="work-showcase-h3">(1+2) портфолио</h3>
+                    <h6 class="work-showcase-h6">Magnum Opus</h6>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="contact">
+        <div class="contact-container">
+            <h2 class="contact-h2">Контакт<br>Со мной</h2>
+            <div class="contact-interested">
+                <h3 class="contact-interested-title">Я всегда заинтересован</h3>
+                <div class="contact-interested-pool-container">
+                    <h3 class="contact-interested-h3">Вёрсткой</h3>
+                    <h3 class="contact-interested-h3">Книгами</h3>
+                    <h3 class="contact-interested-h3">Общением</h3>
+                    <h3 class="contact-interested-h3">Философией</h3>
+                    <h3 class="contact-interested-h3">UI/UX</h3>
+                    <h3 class="contact-interested-h3">Роком</h3>
+                </div>
+            </div>
+            <div class="contact-links">
+                <a class="contact-links-a">VK</a>
+                <a class="contact-links-a">GitHub</a>
+                <a class="contact-links-a">Почта</a>
+                <p class="contact-links-p" id="ugly-truth">Горькая правда</p>
+            </div>
+        </div>
+    </section>
     <script src="js/script.js"></script>
 </body>
 </html>
