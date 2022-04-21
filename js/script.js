@@ -70,7 +70,7 @@ DimaSidnev.onclick = function audioEasterEgg1(){
 //он отвечает за смену бекграунда на скролл
 window.addEventListener("scroll", () => {
     const [red, green, blue] = [141, 153, 174]; //цвет стартового бг
-    const background = document.getElementsByClassName("background"); //ахтунг! когда ты ищешь по классам, переменная становится по сути списком, так что не забывай индексы
+    const background = document.getElementsByClassName("background-color"); //ахтунг! когда ты ищешь по классам, переменная становится по сути списком, так что не забывай индексы
 
     const y = 1 + (window.scrollY || window.pageYOffset) / 300;
     var [r, g, b] = [red/y, green/y, blue/y].map(Math.round);

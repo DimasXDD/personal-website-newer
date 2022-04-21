@@ -8,19 +8,37 @@
 }
 
 span{
-    color: #d90429;
+    color: #893168;
 }
 
 #navbar{
+    z-index: 50;
     display: flex;
     justify-content: center;
 }
 
-.background{
-    background: no-repeat cover;
+.background-image{
+}
+
+.background-color{
     min-height: 100vh;
     min-width: 95vw;
     overflow: hidden;
+}
+
+.background-image::before{
+    content: '';
+    opacity: 0.7;
+    background-image: url("https://wallpaperaccess.com/full/1773061.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    background-position: center;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
 }
 
 .nav-container{
@@ -49,6 +67,10 @@ span{
     font-size: 20px;
 }
 
+#home{
+    position: relative;
+}
+
 .home-container{
     display: flex;
     justify-content: space-between;
@@ -60,7 +82,7 @@ span{
 
 .home-h2{
     color: #f6f6f6;
-    text-shadow: #2b2d42 20px;
+    text-shadow: #4A1942 20px;
     font-weight: 700;
     font-size: 150px;
 }
@@ -85,12 +107,12 @@ span{
     font-family: 'Caveat';
     text-align: center;
     font-size: 100px;
-    color: #d90429;
+    color: #893168;
 }
 
 #about{
     padding-top: 6%;
-    background-color: #2b2d42;
+    background-color: #4A1942;
 }
 
 .about-container{
@@ -108,14 +130,14 @@ span{
 }
 
 .about-greeting-h3{
-    color: #d90429;
+    color: #893168;
     font-size: 60px;
 }
 
 .about-greeting-h6{
     line-height: 0px;
     font-size: 20px;
-    color: #d90429;
+    color: #893168;
 }
 
 .about-left-h4{
@@ -133,7 +155,7 @@ span{
 }
 
 #work-showcase{
-    background-color: #2b2d42;
+    background-color: #4A1942;
 }
 
 .work-title-h3{
@@ -144,7 +166,7 @@ span{
 
 .work-showcase-star{
     font-size: 30px;
-    color: #d90429;
+    color: #893168;
     transform: rotate(90deg);
 }
 
@@ -207,7 +229,7 @@ span{
 }
 
 #contact{
-    background-color: #2b2d42;
+    background-color: #4A1942;
 }
 
 .contact-container{
