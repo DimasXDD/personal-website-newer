@@ -8,28 +8,64 @@
 }
 
 span{
-    color: #893168;
+    color: #9cc5a1;
 }
 
-#navbar{
+.loader{
+    gap: 10%;
+    position: absolute;
     z-index: 50;
+    height: 100%;
+    width: 100%;
+    background-color: black;
     display: flex;
+    flex-direction: column;
     justify-content: center;
+    place-items: center;
+}
+
+.loader-h2{
+    font-size: 120px;
+    font-family: 'Russo One';
+    color: #f6f6f6;
+}
+
+.loader-spinner{
+    display: inline-block;
+    width: 200px;
+    height: 200px;
+    border: 20px solid rgba(200, 200, 200, 0.3);
+    border-radius: 50%;
+    border-top-color: white;
+    animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+    to{transform: rotate(360deg);}
+};
+
+#navbar{
+    justify-self: center;
+    display: flex;
+    justify-items: center;
+    z-index: 49;
 }
 
 .background-image{
+    display: flex;
+    flex-direction: column;
+    background-size: cover;
 }
 
 .background-color{
-    min-height: 100vh;
-    min-width: 95vw;
+    height: 100vh;
     overflow: hidden;
 }
 
 .background-image::before{
     content: '';
-    opacity: 0.7;
-    background-image: url("https://wallpaperaccess.com/full/1773061.jpg");
+    opacity: 0.4;
+    background-image: url("https://cdn.wallpaperjam.com/content/images/fb/d9/fbd97bb27a825b12de417df8ca2872516d37018b.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -82,7 +118,7 @@ span{
 
 .home-h2{
     color: #f6f6f6;
-    text-shadow: #4A1942 20px;
+    text-shadow: #9cc5a1 20px;
     font-weight: 700;
     font-size: 150px;
 }
@@ -107,12 +143,12 @@ span{
     font-family: 'Caveat';
     text-align: center;
     font-size: 100px;
-    color: #893168;
+    color: #9cc5a1;
 }
 
 #about{
     padding-top: 6%;
-    background-color: #4A1942;
+    background-color: #454955;
 }
 
 .about-container{
@@ -130,14 +166,14 @@ span{
 }
 
 .about-greeting-h3{
-    color: #893168;
+    color: #9cc5a1;
     font-size: 60px;
 }
 
 .about-greeting-h6{
     line-height: 0px;
     font-size: 20px;
-    color: #893168;
+    color: #9cc5a1;
 }
 
 .about-left-h4{
@@ -155,7 +191,7 @@ span{
 }
 
 #work-showcase{
-    background-color: #4A1942;
+    background-color: #454955;
 }
 
 .work-title-h3{
@@ -166,7 +202,7 @@ span{
 
 .work-showcase-star{
     font-size: 30px;
-    color: #893168;
+    color: #9cc5a1;
     transform: rotate(90deg);
 }
 
@@ -229,7 +265,7 @@ span{
 }
 
 #contact{
-    background-color: #4A1942;
+    background-color: #454955;
 }
 
 .contact-container{
