@@ -9,6 +9,11 @@
 
 span{
     color: #9cc5a1;
+    z-index: 1;
+}
+
+body{
+    overflow: hidden;
 }
 
 .loader{
@@ -45,15 +50,10 @@ span{
 };
 
 #navbar{
-    justify-self: center;
-    display: flex;
-    justify-items: center;
     z-index: 49;
 }
 
 .background-image{
-    display: flex;
-    flex-direction: column;
     background-size: cover;
 }
 
@@ -78,8 +78,11 @@ span{
 }
 
 .nav-container{
+    z-index: 49;
     padding-top: 15px;
     padding-bottom: 15px;
+    margin-left: 1.5%;
+    margin-right: 1.5%;
     width: 97%;
     display: flex;
     flex-direction: row;
@@ -87,12 +90,13 @@ span{
 }
 
 .nav-sticky{
+    z-index: 49;
     backdrop-filter: blur( 4px );
     -webkit-backdrop-filter: blur( 4px );
     border-radius: 10px;
     position: fixed;
     top: 0;
-    width: 97%;
+    width: 100%;
 }
 
 .nav-h6{
@@ -177,6 +181,7 @@ span{
 }
 
 .about-left-h4{
+    text-indent: 20%;
     margin-top: 6%;
     font-size: 40px;
 }
@@ -198,17 +203,24 @@ span{
     margin-left: 10%;
     font-size: 60px;
     text-align: start;
+    animation: text-slide 60s infinite;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #9cc5a1;
 }
 
-.work-showcase-star{
-    font-size: 30px;
+.work-title-h3:hover{
+    margin-left: 10%;
+    font-size: 60px;
+    text-align: start;
+    overflow: hidden;
+    text-overflow: ellipsis;
     color: #9cc5a1;
-    transform: rotate(90deg);
 }
 
 .work-showcase-container{
     gap: 5%;
-    margin-top: 5%;
+    margin-top: 0%;
     padding: 2%;
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
@@ -345,4 +357,14 @@ span{
 
 .contact-links-a:hover{
     text-decoration: underline;
+}
+
+@keyframes fade-out {
+    from {opacity: 1;}
+    to {opacity: 0;}
+}
+
+@keyframes text-slide{
+    from{margin-left: -100%;}
+    to{margin-left: 100%;}
 }

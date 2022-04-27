@@ -1,7 +1,12 @@
+//Предостережение для будущего меня, ЭТОТ КОД УЖАСЕН, ОН ПИЗДЕЦ, Я НЕ ЗНАЮ КАК ЕГО СТРУКТУРИРОВАТЬ
+//так что смотри на комменты, их я точно удалять не буду
+
+//доделай текст летающий и давай адаптивность ебаш
+
 var nameIndex = 0;
 var isLoaded = false;
 
-function nameChange(){
+function nameChange(){ //смена имени странички, просто прикольно
     if(nameIndex > 1){nameIndex = 0};
     var namePool = ["Дима Сиднев 🙂", "Дима Сиднев 🙃"];
     const websiteName = document.getElementById("website-name");
@@ -53,18 +58,26 @@ window.onload = function(){
     getTime();
 
     function loadingScreen(){ //эта функция кажется тупой на первый взгляд, но это мой костыль
-        window.scrollTo(0, 1000); //тк у меня есть другие функции которые работают от скролла, эта их триггерит
+        window.scrollTo(0, 1); //тк у меня есть другие функции которые работают от скролла, эта их триггерит
         window.scrollTo(0, 0); //что бы не было видно того, чего видно быть не должно
+
+        var loader = document.getElementsByClassName("loader");
+        loader[0].style.animation = "fade-out 3.5s"; //это в будущем возможно может послужить ошибкой, будь аккуратен
     }
     loadingScreen();
 
-    var loader = document.getElementsByClassName("loader"); //отчистка от загрузочного экрана
-    loader[0].remove();
+    setTimeout(() => { //3 секунды задержка до удаления
+        var body = document.getElementsByTagName("body");
+        var loader = document.getElementsByClassName("loader"); //отчистка от загрузочного экрана
+
+        loader[0].remove();
+        body[0].style.overflow = 'visible'; //шоб скроллбар появился
+    }, 3000);
     isLoaded = true;
 };
 
 window.onscroll = function(){
-    function stickyNav(){
+    function stickyNav(){ //липкий навбар к верху экрана
         var navbar = document.getElementById("navbar");
 
         if(window.pageYOffset >= navbar.offsetTop){
