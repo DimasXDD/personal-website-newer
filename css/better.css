@@ -468,6 +468,11 @@ body{
         font-size: 70px;
     }
 
+    #about{
+        background-color: #454955;
+        padding-bottom: 20%;
+    }
+
     .about-container{
         place-items: center;
         display: flex;
@@ -502,6 +507,7 @@ body{
         font-family: 'Oswald', sans-serif;
         font-size: 25px;
         margin-top: 10%;
+        padding-bottom: 20%;
     }
 
     .work-title-h3{
@@ -570,8 +576,7 @@ body{
     }
 
     .contact-interested-h3{
-        font-family: 'Oswald', sans-serif;
-        font-size: 25px;
+        font-size: 18px;
         padding: 10px 16px;
         border-radius: 16px;
         border: 3px #f6f6f6 solid;
