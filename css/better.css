@@ -5,6 +5,7 @@
     margin-bottom: 0%;
     font-family: 'Russo One';
     color:#f6f6f6;
+    animation: normal;
 }
 
 span{
@@ -86,6 +87,7 @@ body{
     width: 97%;
     display: flex;
     flex-direction: row;
+    border-top: none;
     border-bottom: #f6f6f6 solid 1px;
 }
 
@@ -120,6 +122,12 @@ body{
     width: 96%;
 }
 
+.home-left-part{
+    display: flex;
+    flex-direction: column;
+    gap: 20px 0%;
+}
+
 .home-h2{
     color: #f6f6f6;
     text-shadow: #9cc5a1 20px;
@@ -135,7 +143,13 @@ body{
 }
 
 .home-h4{
-    font-size: 30px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 50px;
+    text-align: justify;
+}
+
+.home-h4-mobile{
+    display: none;
 }
 
 .home-clock-h6{
@@ -181,9 +195,10 @@ body{
 }
 
 .about-left-h4{
+    font-family: 'Oswald', sans-serif;
     text-indent: 20%;
     margin-top: 6%;
-    font-size: 40px;
+    font-size: 42px;
 }
 
 .about-right-img{
@@ -192,7 +207,8 @@ body{
 }
 
 .about-right-h4{
-    font-size: 40px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 42px;
 }
 
 #work-showcase{
@@ -200,22 +216,15 @@ body{
 }
 
 .work-title-h3{
-    margin-left: 10%;
     font-size: 60px;
     text-align: start;
-    animation: text-slide 60s infinite;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    color: #9cc5a1;
+    padding-left: 10%;
+    margin-bottom: 5%;
 }
 
-.work-title-h3:hover{
-    margin-left: 10%;
-    font-size: 60px;
-    text-align: start;
-    overflow: hidden;
-    text-overflow: ellipsis;
+.work-title-h3-span{
     color: #9cc5a1;
+    font-size: 60px;
 }
 
 .work-showcase-container{
@@ -228,11 +237,13 @@ body{
 }
 
 .work-showcase-h3{
-    font-size: 60px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 62px;
 }
 
 .work-showcase-h6{
-    font-size: 15px;
+    font-family: 'Oswald', sans-serif;
+    font-size: 19px;
     line-height: 0px;
 }
 
@@ -291,6 +302,11 @@ body{
     padding: 2%;
 }
 
+.contact-title{
+    grid-row-start: 1;
+    grid-row-end: span 3;
+}
+
 .contact-h2{
     font-weight: 700;
     font-size: 150px;
@@ -309,6 +325,10 @@ body{
 
 .contact-interested-title{
     font-size: 50px;
+}
+
+.contact-interested-title-mobile{
+    display: none;
 }
 
 .contact-interested-pool-container{
@@ -330,6 +350,7 @@ body{
 #footer{
     display: flex;
     justify-content: center;
+    overflow: hidden;
 }
 
 .contact-links{
@@ -349,12 +370,6 @@ body{
     font-size: 20px;
 }
 
-.contact-links-p{
-    margin: 10px 10px;
-    font-size: 20px;
-    text-align: end;
-}
-
 .contact-links-a:hover{
     text-decoration: underline;
 }
@@ -364,7 +379,206 @@ body{
     to {opacity: 0;}
 }
 
-@keyframes text-slide{
-    from{margin-left: -100%;}
-    to{margin-left: 100%;}
+[data-inviewport="fade-in-bottom"]{
+    transition: 2s;
+    opacity: 0%;
+    transform: translateY(100%);
+}
+[data-inviewport="fade-in-bottom"].is-inViewport{
+    opacity: 100%;
+    transform: translateY(0%);
+}
+
+[data-inviewport="slide-to-right"]{
+    transition: 3s;
+    opacity: 0%;
+    margin-left: -100%;
+  }
+[data-inviewport="slide-to-right"].is-inViewport{
+    opacity: 100%;
+    margin-left: 0%;
+}
+
+[data-inviewport="slide-to-right"]{
+    transition: 3s;
+    opacity: 0%;
+    margin-left: -100%;
+  }
+[data-inviewport="slide-to-right"].is-inViewport{
+    opacity: 100%;
+    margin-left: 0%;
+}
+[data-inviewport="fade-in"]{
+    transition: 3s;
+    opacity: 0%;
+  }
+[data-inviewport="fade-in"].is-inViewport{
+    opacity: 100%;
+}
+
+@media screen and (max-width: 991px) {
+    
+}
+
+@media screen and (max-width: 767px) {
+    
+}
+
+@media screen and (max-width: 479px) {
+    .loader-h2{
+        font-size: 80px;
+    }
+
+    .nav-h6{
+        font-size: 15px;
+    }
+
+    .home-container{
+        flex-direction: column-reverse;
+        justify-content: center;
+        gap: 10% 0%;
+        margin-top: 0%;
+    }
+
+    .home-h2{
+        font-size: 61px;
+        text-align: justify;
+    }
+
+    .home-h4{
+        font-size: 17px;
+        display: none;
+    }
+
+    .home-h4-mobile{
+        font-family: 'Oswald', sans-serif;
+        font-size: 20px;
+        display: inline;
+        text-align: start;
+        text-indent: 10%;
+    }
+
+    .home-clock-h6{
+        font-family: 'Oswald', sans-serif;
+        font-size: 15px;
+        text-align: end;
+    }
+
+    .home-clock-h3{
+        font-size: 70px;
+    }
+
+    .about-container{
+        place-items: center;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .about-greeting-h3{
+        padding-top: 10%;
+        margin-top: 10%;
+        font-size: 35px;
+    }
+
+    .about-greeting-h6{
+        font-size: 15px;
+    }
+
+    .about-left-h4{
+        font-family: 'Oswald', sans-serif;
+        margin-top: 10%;
+        margin-bottom: 10%;
+        font-size: 23px;
+    }
+
+    .about-right-img{
+        margin-top: 10%;
+        margin-left: 40%;
+        height: 300px;
+        width: 150px;
+    }
+
+    .about-right-h4{
+        font-family: 'Oswald', sans-serif;
+        font-size: 25px;
+        margin-top: 10%;
+    }
+
+    .work-title-h3{
+        padding-top: 20%;
+        font-size: 35px;
+    }
+
+    .work-title-h3-span{
+        font-size: 30px;
+    }
+
+    .work-showcase-container{
+        place-items: center;
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    .work-showcase-h3{
+        display: none;
+    }
+
+    .work-showcase-h6{
+        display: none;
+    }
+
+    .work-showcase-img{
+        height: 200px;
+        width: 350px;
+    }
+
+    .contact-container{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        place-items: center;
+    }
+
+    .contact-title{
+        justify-content: flex-start;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .contact-h2{
+        text-align: start;
+        margin-top: 20%;
+        font-size: 80px;
+    }
+
+    .contact-interested-title-mobile{
+        display: block;
+        font-size: 23px;
+        font-family: 'Oswald', sans-serif;
+    }
+
+    .contact-interested-title{
+        display: none;   
+    }
+
+    .contact-interested-pool-container{
+        justify-self: start;
+        display: grid;
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-interested-h3{
+        font-family: 'Oswald', sans-serif;
+        font-size: 25px;
+        padding: 10px 16px;
+        border-radius: 16px;
+        border: 3px #f6f6f6 solid;
+    }
+
+    .contact-links{
+        padding-bottom: 0px;
+        justify-self: end;
+    }
 }

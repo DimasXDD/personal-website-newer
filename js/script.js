@@ -110,3 +110,20 @@ window.addEventListener("scroll", () => {
     
     background[0].style.backgroundColor = `rgb(${r}, ${g}, ${b})`; //как тут 
 });
+
+const inViewport = (entries, observer) => { //что бы анимации проигрывались при виде, лучше ничего тут не трогай
+    entries.forEach(entry => {
+      entry.target.classList.toggle("is-inViewport", entry.isIntersecting); //эта часть отвечает за проигрывание анимации ТОЛЬКО 1 РАЗ ЗА ПОЯВЛЕНИЕ НА ЭКРАНЕ
+        if (entry.intersectionRatio > 0) { //забавный факт, я взял этот код со стэковерфлоу, он не подошёл, ещё поменял чутка местами, выдало ошибку
+          observer.unobserve(entry.target); //удалил к хуям функцию, которая тут была и всё заработало
+        }; //о дивный мир it, я люблю тебя!
+    });
+  };
+  
+  const Obs = new IntersectionObserver(inViewport);
+  const obsOptions = {};
+  
+  const ELs_inViewport = document.querySelectorAll('[data-inviewport]');
+  ELs_inViewport.forEach(EL => {
+    Obs.observe(EL, obsOptions);
+  });
