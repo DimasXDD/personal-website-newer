@@ -65,7 +65,7 @@ body{
 
 .background-image::before{
     content: '';
-    opacity: 0.4;
+    opacity: 0.3;
     background-image: url("https://cdn.wallpaperjam.com/content/images/fb/d9/fbd97bb27a825b12de417df8ca2872516d37018b.jpg");
     background-repeat: no-repeat;
     background-size: cover;
@@ -143,6 +143,14 @@ body{
     gap: 20px 0%;
 }
 
+.home-clock-text{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    place-items: center;
+    gap: 20px;
+}
+
 .home-h4{
     font-family: 'Oswald', sans-serif;
     font-size: 50px;
@@ -158,10 +166,16 @@ body{
     text-align: center;
 }
 
-.home-clock-h3{
+.home-clock-h3-day{
     font-family: 'Caveat';
     text-align: center;
-    font-size: 150px;
+    font-size: 250px;
+}
+
+.home-clock-h3-month{
+    font-family: 'Caveat';
+    text-align: center;
+    font-size: 125px;
     color: #9cc5a1;
 }
 
@@ -251,6 +265,13 @@ body{
 .work-showcase-img{
     height: 300px;
     width: 500px;
+    margin: 0% 0%;
+    transition: 3s;
+}
+
+.work-showcase-img:hover{
+    margin: 3% 3%;
+    transition: 3s;
 }
 
 .work-showcase-texts{
@@ -369,6 +390,11 @@ body{
 .contact-links-a{
     margin: 10px 10px;
     font-size: 20px;
+    text-decoration: none;
+}
+
+.contact-links-a:hover{
+    text-decoration: underline;
 }
 
 .contact-links-a:hover{
@@ -448,9 +474,13 @@ body{
         font-size: 18px;
     }
 
-    .home-clock-h3{
-        font-size: 120px;
+    .home-clock-h3-day{
+        font-size: 200px;
     }
+    
+    .home-clock-h3-month{
+        font-size: 100px;
+    }   
 
     .about-greeting-h3{
         font-size: 50px;
@@ -538,9 +568,13 @@ body{
         text-align: center;
     }
 
-    .home-clock-h3{
-        font-size: 70px;
+    .home-clock-h3-day{
+        font-size: 110px;
     }
+    
+    .home-clock-h3-month{
+        font-size: 5em;
+    } 
 
     #about{
         background-color: #454955;

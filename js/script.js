@@ -21,7 +21,8 @@ window.onload = function(){
 
     function getTime(){
         var date = new Date();
-        var clock = document.getElementById("clock");
+        const Day = document.getElementById("day");
+        const Month = document.getElementById("month");
         var month;
     
         function monthsConverter(month){
@@ -53,7 +54,8 @@ window.onload = function(){
             }
         }
     
-        clock.innerHTML =date.getDate() +" "+ monthsConverter(month);
+        Day.innerHTML = date.getDate();
+        Month.innerHTML = monthsConverter(month);
     }
     getTime();
 
@@ -103,12 +105,13 @@ DimaSidnev.onclick = function audioEasterEgg1(){
 //он отвечает за смену бекграунда на скролл
 window.addEventListener("scroll", () => {
     const [red, green, blue] = [100, 100, 100]; //цвет стартового бг
-    const background = document.getElementsByClassName("background-color"); //ахтунг! когда ты ищешь по классам, переменная становится по сути списком, так что не забывай индексы
+    const background_color = document.getElementsByClassName("background-color"); //ахтунг! когда ты ищешь по классам, переменная становится по сути списком, так что не забывай индексы
+    const backgroundImage = document.getElementsByClassName("background-image");
 
     const y = 1 + (window.scrollY || window.pageYOffset) / 400;
     var [r, g, b] = [red/y, green/y, blue/y].map(Math.round);
     
-    background[0].style.backgroundColor = `rgb(${r}, ${g}, ${b})`; //как тут 
+    background_color[0].style.backgroundColor = `rgb(${r}, ${g}, ${b})`; //как тут 
 });
 
 const inViewport = (entries, observer) => { //что бы анимации проигрывались при виде, лучше ничего тут не трогай
