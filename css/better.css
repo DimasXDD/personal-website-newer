@@ -9,12 +9,72 @@
 }
 
 span{
-    color: #9cc5a1;
+    color: #d42f49;
     z-index: 1;
 }
 
 body{
     overflow: hidden;
+}
+
+.easter-egg-popup{
+    background: rgba(0, 0, 0, 0.4);
+    height: 100%;
+    position: fixed;
+    top: 0%;
+    width: 100%;
+    z-index: 228;
+    text-align: center;
+    display: none;
+    flex-direction: column;
+    place-items: center;
+    justify-content: center;
+}
+
+.easter-egg-popup-container{
+    background-color: #1f4d52;
+    border-bottom: #d42f49 4px solid;
+    border-right: #d42f49 4px solid;
+    width: 60%;
+    padding: 2%;
+    position: relative;
+    vertical-align: middle;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+    justify-content: space-around;
+}
+
+.easter-egg-popup-h3{
+    font-size: 60px;
+    color: #d42f49;
+}
+
+.easter-egg-popup-p{
+    font-size: 30px;
+}
+
+.easter-egg-popup-btn{
+    background-color: #d42f49;
+    color: #f6f6f6;
+    width: 500px;
+    height: 140px;
+    font-size: 30px;
+    text-align: center;
+    border: none;
+    justify-self: center;
+    place-self: center;
+    transition: 2s;
+}
+
+.easter-egg-popup-btn:hover{
+    transition: 2s;
+    background-color:#FFD700;
+    color: #000;
+}
+
+.easter-egg-popup-p-small{
+    font-size: 15px;
 }
 
 .loader{
@@ -61,12 +121,13 @@ body{
 .background-color{
     height: 100vh;
     overflow: hidden;
+    background-color: rgb(0, 0, 0);
 }
 
 .background-image::before{
     content: '';
-    opacity: 0.3;
-    background-image: url("https://cdn.wallpaperjam.com/content/images/fb/d9/fbd97bb27a825b12de417df8ca2872516d37018b.jpg");
+    opacity: 0.5;
+    background-image: url("https://i.pinimg.com/736x/38/0e/03/380e0316cd4e4f12e466290456bef86f.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -130,7 +191,7 @@ body{
 
 .home-h2{
     color: #f6f6f6;
-    text-shadow: #9cc5a1 20px;
+    text-shadow: #d42f49 20px;
     font-weight: 700;
     font-size: 170px;
 }
@@ -181,12 +242,12 @@ body{
     font-family: 'Caveat';
     text-align: center;
     font-size: 125px;
-    color: #9cc5a1;
+    color: #d42f49;
 }
 
 #about{
     padding-top: 6%;
-    background-color: #454955;
+    background-color: #1f4d52;
 }
 
 .about-container{
@@ -204,14 +265,14 @@ body{
 }
 
 .about-greeting-h3{
-    color: #9cc5a1;
+    color: #d42f49;
     font-size: 60px;
 }
 
 .about-greeting-h6{
     line-height: 0px;
     font-size: 20px;
-    color: #9cc5a1;
+    color: #d42f49;
 }
 
 .about-left-h4{
@@ -232,7 +293,7 @@ body{
 }
 
 #work-showcase{
-    background-color: #454955;
+    background-color: #1f4d52;
 }
 
 .work-title-h3{
@@ -243,7 +304,7 @@ body{
 }
 
 .work-title-h3-span{
-    color: #9cc5a1;
+    color: #d42f49;
     font-size: 60px;
 }
 
@@ -316,7 +377,7 @@ body{
 }
 
 #contact{
-    background-color: #454955;
+    background-color: #1f4d52;
 }
 
 .contact-container{
@@ -352,7 +413,12 @@ body{
 }
 
 .contact-interested-title{
-    font-size: 50px;
+    font-size: 60px;
+}
+
+.contact-interested-h3-span{
+    font-size: 60px;
+    color: #d42f49;
 }
 
 .contact-interested-title-mobile{
@@ -368,7 +434,7 @@ body{
 }
 
 .contact-interested-h3{
-    font-size: 25px;
+    font-size: 35px;
     text-align: center;
     padding: 10px 20px;
     border-radius: 16px;
@@ -550,6 +616,10 @@ body{
         font-size: 110px;
     }
 
+    .contact-interested-h3-span{
+        font-size: 45px;
+    }
+
     .contact-interested-pool-container{
         margin-bottom: -20%;
     }
@@ -561,6 +631,21 @@ body{
 }
 
 @media screen and (max-width: 640px) {
+
+    .easter-egg-popup-h3{
+        font-size: 30px;
+        color: #d42f49;
+    }
+    
+    .easter-egg-popup-p{
+        font-size: 20px;
+    }
+    
+    .easter-egg-popup-p-small{
+        font-size: 10px;
+    }
+    
+
     .loader-h2{
         font-size: 80px;
     }
@@ -609,7 +694,7 @@ body{
     } 
 
     #about{
-        background-color: #454955;
+        background-color: #1f4d52;
         padding-bottom: 20%;
     }
 
@@ -679,6 +764,11 @@ body{
         width: 320px;
     }
 
+    .work-showcase-img:hover{
+        margin: 3% 3%;
+        transition: 1.5s;
+    }
+
     .contact-container{
         display: flex;
         flex-direction: column;
@@ -706,6 +796,10 @@ body{
 
     .contact-interested-title{
         display: none;   
+    }
+
+    .contact-interested-h3-span{
+        font-size: 30px;
     }
 
     .contact-interested-pool-container{

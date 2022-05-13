@@ -7,7 +7,7 @@
 
     <link href="css/better.css" rel="stylesheet">
 
-    <link href="src/icon.jpg" rel="icon">
+    <link href="src/new-icon.png" rel="icon">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,6 +18,15 @@
     <title id="website-name">Дима Сиднев</title>
 </head>
 <body>
+    <div class="easter-egg-popup">
+        <div class="easter-egg-popup-container">
+            <h3 class="easter-egg-popup-h3">Sample text</h3>
+            <p class="easter-egg-popup-p">Sample text</p>
+            <button class="easter-egg-popup-btn" value="PLAY">О ДА НАЖМИ НА МЕНЯ</button>
+            <p class="easter-egg-popup-p-small">Осталось нажатий: 10</p>
+            <audio src="src/bruh.mp3" id="bruh-momento"></audio>
+        </div>
+    </div>
     <div class="loader">
         <h2 class="loader-h2" data-inviewport="fade-in-bottom">Гружусь</h2>
         <div class="loader-spinner"></div>
@@ -40,9 +49,9 @@
                     <div class="home-right-part">
                         <div class="home-clock">
                             <div class="home-clock-text">
-                                <h3 id="day" class="home-clock-h3-day"></h3>
+                                <h3 id="day" class="home-clock-h3-day">никто это не прочтёт кроме меня лол</h3>
                                 <div class="home-clock-right">
-                                    <h3 id="month" class="home-clock-h3-month"></h3>
+                                    <h3 id="month" class="home-clock-h3-month">никто это не прочтёт кроме меня лол</h3>
                                     <h6 class="home-clock-h6">А я всё ещё учусь</h6>
                                 </div>
                             </div>
@@ -60,7 +69,7 @@
                     <h3 class="about-greeting-h3">Привет, я Дима!</h3>
                     <h6 class="about-greeting-h6">Дима Сиднев</h6>
                 </div>
-                <h4 class="about-left-h4" data-inviewport="slide-to-right">Я использую своё синтетическое воображение и не очень хорошие навыки web-разработки, что бы создавать нечто большее. Это бессмертное - сайты. Не, ну сам посуди, все мы сдохнем, а они останутся и будут радовать глаза будущего человечества. Пожалуй, сайты сродни искусству.</h4>
+                <h4 class="about-left-h4" data-inviewport="slide-to-right">Я сам учусь создавать нечто прекрасное, вечное... прикольное? Сайты короче я делаю. В основном мой упор идёт на верстку, так как я не очень утруждал себя изучать JavaScript. Ничего, исправлюсь, рано или поздно я буду гордо звать себя... ДЖУНИОР ФРОНТЕНД ДЕВЕЛОПЕР! Чувак, если бы ты только знал как я ненавижу англицизмы.</h4>
             </div>
             <div class="about-right-part" data-inviewport="fade-in-bottom">
                 <img class="about-right-img">
@@ -69,7 +78,7 @@
         </div>
     </section>
     <section id="work-showcase">
-        <h3 class="work-title-h3" data-inviewport="slide-to-right">Мои работы<span class="work-title-h3-span">★</span></h3>
+        <h3 class="work-title-h3" data-inviewport="slide-to-right">Мои работы<span class="work-title-h3-span" onclick="easterEggPopup()">★</span></h3>
         <div class="work-showcase-container">
             <div class="work-showcase-1" data-inviewport="fade-in-bottom">
                 <img src="src/dw.webp" class="work-showcase-img">
@@ -98,10 +107,10 @@
         <div class="contact-container">
             <div class="contact-title">
                 <h2 class="contact-h2" data-inviewport="fade-in">Контакт<br>Со мной</h2>
-                <h3 class="contact-interested-title-mobile" data-inviewport="slide-to-right">Я всегда заинтересован</h3>
+                <h3 class="contact-interested-title-mobile" data-inviewport="slide-to-right">Я всегда заинтересован<span class="contact-interested-h3-span">✗</span></h3>
             </div>
             <div class="contact-interested" data-inviewport="fade-in-bottom">
-                <h3 class="contact-interested-title">Я всегда заинтересован</h3>
+                <h3 class="contact-interested-title">Я всегда заинтересован<span class="work-title-h3-span">✗</span></h3>
                 <div class="contact-interested-pool-container">
                     <h3 class="contact-interested-h3">Вёрсткой</h3>
                     <h3 class="contact-interested-h3">Книгами</h3>

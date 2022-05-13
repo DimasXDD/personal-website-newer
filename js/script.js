@@ -1,10 +1,44 @@
 //Предостережение для будущего меня, ЭТОТ КОД УЖАСЕН, ОН ПИЗДЕЦ, Я НЕ ЗНАЮ КАК ЕГО СТРУКТУРИРОВАТЬ
 //так что смотри на комменты, их я точно удалять не буду
 
-//доделай текст летающий и давай адаптивность ебаш
-
 var nameIndex = 0;
 var isLoaded = false;
+var bruhs = 10;
+
+function easterEggPopup(){
+    //доделать это говно
+    const popup = document.getElementsByClassName("easter-egg-popup");
+    const header = document.getElementsByClassName("easter-egg-popup-h3");
+    const text = document.getElementsByClassName("easter-egg-popup-p");
+    const smText = document.getElementsByClassName("easter-egg-popup-p-small");
+    const body = document.getElementsByTagName("body");
+    const button = document.getElementsByClassName("easter-egg-popup-btn");
+
+    if(bruhs == 0){
+        popup[0].style.display = "none";
+        body[0].style.overflow = "visible";
+        console.log("иди нахуй"); //Xd делал для теста, пожалуй оставлю навсегда, кто вообще в консоль смотрит?
+        return;
+    }
+
+    popup[0].style.display = "flex";
+    body[0].style.overflow = "hidden";
+
+    header[0].innerHTML = "Вау! Пасхалка!";
+    text[0].innerHTML = "Якорь мне в бухту!<br>Не знаю зачем, но я захотел сделать... эту... кнопку...";
+
+    button[0].onclick = function audioEasterEgg(){
+        var audio = document.getElementById("bruh-momento");
+        if(bruhs > 0){
+            audio.play();
+            bruhs = bruhs -1;
+            smText[0].innerHTML = "Осталось нажатий: " +bruhs;
+        } else{
+            popup[0].style.display = "none";
+            body[0].style.overflow = "visible";
+        }
+    }
+}
 
 function nameChange(){ //смена имени странички, просто прикольно
     if(nameIndex > 1){nameIndex = 0};
@@ -99,20 +133,6 @@ DimaSidnev.onclick = function audioEasterEgg1(){
     var audio = document.getElementById("mireska-has-arrived");
     audio.play();
 }
-
-
-//этот ивент я хочу поподробнее расписать, так как он кажется мне сложным (не я его придумал)
-//он отвечает за смену бекграунда на скролл
-window.addEventListener("scroll", () => {
-    const [red, green, blue] = [100, 100, 100]; //цвет стартового бг
-    const background_color = document.getElementsByClassName("background-color"); //ахтунг! когда ты ищешь по классам, переменная становится по сути списком, так что не забывай индексы
-    const backgroundImage = document.getElementsByClassName("background-image");
-
-    const y = 1 + (window.scrollY || window.pageYOffset) / 400;
-    var [r, g, b] = [red/y, green/y, blue/y].map(Math.round);
-    
-    background_color[0].style.backgroundColor = `rgb(${r}, ${g}, ${b})`; //как тут 
-});
 
 const inViewport = (entries, observer) => { //что бы анимации проигрывались при виде, лучше ничего тут не трогай
     entries.forEach(entry => {
