@@ -9,7 +9,7 @@
 }
 
 span{
-    color: #e14132;
+    color: #d62d22;
     z-index: 1;
 }
 
@@ -32,9 +32,9 @@ body{
 }
 
 .easter-egg-popup-container{
-    background-color: #03354f;
-    border-bottom: #e14132 0.5rem solid;
-    border-right: #e14132 0.5rem solid;
+    background-color: #292a34;
+    border-bottom: #d62d22 0.5rem solid;
+    border-right: #d62d22 0.5rem solid;
     width: 60%;
     padding: 2%;
     position: relative;
@@ -47,7 +47,7 @@ body{
 
 .easter-egg-popup-h3{
     font-size: 60px;
-    color: #e14132;
+    color: #d62d22;
 }
 
 .easter-egg-popup-p{
@@ -55,7 +55,7 @@ body{
 }
 
 .easter-egg-popup-btn{
-    background-color: #e14132;
+    background-color: #d62d22;
     color: #f6f6f6;
     width: 500px;
     height: 140px;
@@ -126,7 +126,7 @@ body{
 .background-image::before{
     content: '';
     opacity: 0.5;
-    background-image: url("https://wallpaperaccess.com/full/6384386.jpg");
+    background-image: url("https://www.nationalgalleries.org/sites/default/files/2014AA78963-dm_0.jpg");
     background-repeat: no-repeat;
     background-size: cover;
     background-attachment: fixed;
@@ -190,7 +190,7 @@ body{
 
 .home-h2{
     color: #f6f6f6;
-    text-shadow: #e14132 20px;
+    text-shadow: #d62d22 20px;
     font-weight: 700;
     font-size: 170px;
 }
@@ -241,12 +241,12 @@ body{
     font-family: 'Caveat';
     text-align: center;
     font-size: 125px;
-    color: #e14132;
+    color: #d62d22;
 }
 
 #about{
     padding-top: 6%;
-    background-color: #03354f;
+    background-color: #292a34;
 }
 
 .about-container{
@@ -264,14 +264,14 @@ body{
 }
 
 .about-greeting-h3{
-    color: #e14132;
+    color: #d62d22;
     font-size: 60px;
 }
 
 .about-greeting-h6{
     line-height: 0px;
     font-size: 20px;
-    color: #e14132;
+    color: #d62d22;
 }
 
 .about-left-h4{
@@ -282,6 +282,7 @@ body{
 }
 
 .about-right-img{
+    margin: 0px;
     height: 500px;
     width: 300px;
     animation: rotation 10s linear infinite;
@@ -295,7 +296,7 @@ body{
 }
 
 #work-showcase{
-    background-color: #03354f;
+    background-color: #292a34;
 }
 
 .work-title-h3{
@@ -306,8 +307,18 @@ body{
 }
 
 .work-title-h3-span{
-    color: #e14132;
+    color: #d62d22;
     font-size: 60px;
+}
+
+.work-showcase-a{
+    overflow-x: hidden;
+    transition: 1.5s;
+}
+
+.work-showcase-a:hover{
+    margin: 20px 20px;
+    transition: 1.5s;
 }
 
 .work-showcase-container{
@@ -334,13 +345,6 @@ body{
 .work-showcase-img{
     height: 300px;
     width: 500px;
-    margin: 0% 0%;
-    transition: 3s;
-}
-
-.work-showcase-img:hover{
-    margin: 3% 3%;
-    transition: 3s;
 }
 
 .work-showcase-texts{
@@ -379,7 +383,7 @@ body{
 }
 
 #contact{
-    background-color: #03354f;
+    background-color: #292a34;
 }
 
 .contact-container{
@@ -400,7 +404,7 @@ body{
 
 .contact-h2{
     font-weight: 700;
-    font-size: 150px;
+    font-size: 160px;
     grid-row-start: 1;
     grid-row-end: span 3;
 }
@@ -420,7 +424,7 @@ body{
 
 .contact-interested-h3-span{
     font-size: 60px;
-    color: #e14132;
+    color: #d62d22;
 }
 
 .contact-interested-title-mobile{
@@ -647,7 +651,7 @@ body{
     }
 
     .home-h2{
-        font-size: 120px;
+        font-size: 140px;
     }
 
     .home-h4{
@@ -678,6 +682,11 @@ body{
         font-size: 33px;
     }
 
+    .about-right-img{
+        height: 400px;
+        width: 250px;
+    }
+
     .work-title-h3{
         font-size: 47px;
     }
@@ -692,6 +701,11 @@ body{
 
     .work-showcase-h6{
         font-size: 15px;
+    }
+
+    .work-showcase-img{
+        height: 250px;
+        width: 400px;
     }
 
     .work-showcase-1{
@@ -724,19 +738,19 @@ body{
     }
 
     .contact-h2{
-        font-size: 110px;
+        font-size: 120px;
     }
 
     .contact-interested-h3-span{
         font-size: 45px;
     }
 
-    .contact-interested-pool-container{
-        margin-bottom: -10%;
+    .contact-interested-title{
+        font-size: 50px;
     }
 
     .contact-interested-h3{
-        font-size: 21px;
+        font-size: 20px;
     }
 
 }
@@ -745,7 +759,7 @@ body{
 
     .easter-egg-popup-h3{
         font-size: 30px;
-        color: #e14132;
+        color: #d62d22;
     }
     
     .easter-egg-popup-p{
@@ -811,7 +825,7 @@ body{
     } 
 
     #about{
-        background-color: #03354f;
+        background-color: #292a34;
         padding-bottom: 20%;
     }
 
@@ -868,6 +882,12 @@ body{
         gap: 30px;
     }
 
+    .work-showcase-a:hover{
+        margin-top: 20px;
+        margin-bottom: 20px;
+        transition: 1.5s;
+    }
+
     .work-showcase-h3{
         display: none;
     }
@@ -879,11 +899,13 @@ body{
     .work-showcase-img{
         height: 200px;
         width: 320px;
+        transition: 1.5s;
     }
 
     .work-showcase-img:hover{
-        margin: 3% 3%;
         transition: 1.5s;
+        height: 180px;
+        width: 280px;
     }
 
     .contact-container{
