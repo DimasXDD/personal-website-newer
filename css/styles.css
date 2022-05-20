@@ -575,12 +575,22 @@ body{
         font-size: 37px;
     }
 
+    .about-right-img{
+        height: 450px;
+        width: 250px;
+    }
+
     .work-title-h3{
         font-size: 55px;
     }
 
     .work-title-h3-span{
         font-size: 55px;
+    }
+
+    .work-showcase-img{
+        height: 290px;
+        width: 450px;
     }
 
     .work-showcase-h3{
