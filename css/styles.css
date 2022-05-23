@@ -9,7 +9,7 @@
 }
 
 span{
-    color: #d62d22;
+    color: #7318a7;
     z-index: 1;
 }
 
@@ -32,9 +32,9 @@ body{
 }
 
 .easter-egg-popup-container{
-    background-color: #292a34;
-    border-bottom: #d62d22 0.5rem solid;
-    border-right: #d62d22 0.5rem solid;
+    background-color: #070407;
+    border-bottom: #7318a7 0.5rem solid;
+    border-right: #7318a7 0.5rem solid;
     width: 60%;
     padding: 2%;
     position: relative;
@@ -47,7 +47,7 @@ body{
 
 .easter-egg-popup-h3{
     font-size: 60px;
-    color: #d62d22;
+    color: #7318a7;
 }
 
 .easter-egg-popup-p{
@@ -55,7 +55,7 @@ body{
 }
 
 .easter-egg-popup-btn{
-    background-color: #d62d22;
+    background-color: #7318a7;
     color: #f6f6f6;
     width: 500px;
     height: 140px;
@@ -126,8 +126,7 @@ body{
 .background-image::before{
     content: '';
     opacity: 0.5;
-    background-image: url("https://www.nationalgalleries.org/sites/default/files/2014AA78963-dm_0.jpg");
-    background-repeat: no-repeat;
+    background-image: url("https://www.hdwallpapers.in/download/dark_purple_black_paint_liquid_stains_4k_hd_abstract-2560x1440.jpg");
     background-size: cover;
     background-attachment: fixed;
     background-position: center;
@@ -136,6 +135,8 @@ body{
     left: 0px;
     right: 0px;
     bottom: 0px;
+    height: 100%;
+    width: 100%;
 }
 
 .nav-container{
@@ -190,7 +191,7 @@ body{
 
 .home-h2{
     color: #f6f6f6;
-    text-shadow: #d62d22 20px;
+    text-shadow: #7318a7 20px;
     font-weight: 700;
     font-size: 170px;
 }
@@ -241,12 +242,12 @@ body{
     font-family: 'Caveat';
     text-align: center;
     font-size: 125px;
-    color: #d62d22;
+    color: #7318a7;
 }
 
 #about{
     padding-top: 6%;
-    background-color: #292a34;
+    background-color: #070407;
 }
 
 .about-container{
@@ -264,14 +265,14 @@ body{
 }
 
 .about-greeting-h3{
-    color: #d62d22;
+    color: #7318a7;
     font-size: 60px;
 }
 
 .about-greeting-h6{
     line-height: 0px;
     font-size: 20px;
-    color: #d62d22;
+    color: #7318a7;
 }
 
 .about-left-h4{
@@ -296,7 +297,7 @@ body{
 }
 
 #work-showcase{
-    background-color: #292a34;
+    background-color: #070407;
 }
 
 .work-title-h3{
@@ -307,7 +308,7 @@ body{
 }
 
 .work-title-h3-span{
-    color: #d62d22;
+    color: #7318a7;
     font-size: 60px;
 }
 
@@ -383,7 +384,7 @@ body{
 }
 
 #contact{
-    background-color: #292a34;
+    background-color: #070407;
 }
 
 .contact-container{
@@ -424,7 +425,7 @@ body{
 
 .contact-interested-h3-span{
     font-size: 60px;
-    color: #d62d22;
+    color: #7318a7;
 }
 
 .contact-interested-title-mobile{
@@ -769,7 +770,7 @@ body{
 
     .easter-egg-popup-h3{
         font-size: 30px;
-        color: #d62d22;
+        color: #7318a7;
     }
     
     .easter-egg-popup-p{
@@ -835,7 +836,7 @@ body{
     } 
 
     #about{
-        background-color: #292a34;
+        background-color: #070407;
         padding-bottom: 20%;
     }
 
